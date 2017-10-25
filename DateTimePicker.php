@@ -191,7 +191,7 @@ class DateTimePicker extends InputWidget
     protected function renderInput()
     {
         if ($this->type == self::TYPE_INLINE) {
-            if (empty($this->options['readonly'])) {
+            if (!isset($this->options['readonly'])) {
                 $this->options['readonly'] = true;
             }
             if (empty($this->options['class'])) {
